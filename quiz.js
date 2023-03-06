@@ -1,7 +1,8 @@
 let quiz_rules = [
-    "You Have Only 20 Seconds For Each Question.",
-    "Once You Select Any Answer.It Can't Be Undone",
-    "You'll Get Points On The Basic Of Your Correct Answers."
+    "Preparado para responder algumas perguntas relacionada a água?",
+    "Serão 8 Questões.",
+    "Você terá apenas 20 segundos para responder cada!",
+    "Boa Sorte!"
 ];
 
 
@@ -81,39 +82,44 @@ let quiz_questions = [
     },
     {
         // write yout question here
-        question: "Which of the following is correct?",
+        question: "A pegada hídrica mostra quanto de água você consome. Do total, quanto vem do uso direto, como banho e uso para beber?",
     
         options: [
-            "JQuery is a JavaScript Library",
-            "JQuery is a JSON Library",
+            "Mais de 90%",
+            "Entre 50 e 90%",
+            "De 10 á 50%",
+            "Menos de 10%",
+        ],
+        // correct option (1,2,3,4 etc)
+        answer: 4,
+    //    selected_answer:null
+    },
+    {
+        // write yout question here
+        question: "O ciclo da água é o mecanismo responsável por renovar a disponibilidade de água no planeta. Esse ciclo biogeoquímico consiste na transformação e circulação da água pela natureza através",
+    
+        options: [
+            "apenas da chuva",
+            "das mudanças de estado físico",
+            "de reações químicas",
+            "da criação de novas moléculas de água na natureza",
+        ],
+        // correct option (1,2,3,4 etc)
+        answer: 2,
+    //    selected_answer:null
+    },
+    {
+        // write yout question here
+        question: "O Brasil é o país mais rico em água doce do planeta?",
+    
+        options: [
+            'Sim, o Brasil tem reservas únicas de água doce',
+            'Não, isso é válido para a bacia amazônica que está em vários países da América do Sul',
+            'Não, o Brasil tem a maior bacia mas não é o mais rico',
+            'Sim, toda a riqueza do Brasil vem da água.'
         ],
         // correct option (1,2,3,4 etc)
         answer: 1,
-    //    selected_answer:null
-    },
-    {
-        // write yout question here
-        question: "Bootstrap 3 is mobile-first.",
-    
-        options: [
-            "False",
-            "True",
-        ],
-        // correct option (1,2,3,4 etc)
-        answer: 2,
-    //    selected_answer:null
-    },
-    {
-        // write yout question here
-        question: "What is a correct syntax to output 'Hello World' in C++?",
-    
-        options: [
-            'System.out.printLn("Hello World")',
-            'cout << "Hello World"',
-            'print("Hello World")',
-        ],
-        // correct option (1,2,3,4 etc)
-        answer: 2,
     //    selected_answer:null
     },
     

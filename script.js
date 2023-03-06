@@ -11,7 +11,7 @@ let quizRules = () => {
     total_correct_ans = 0;
 
     container.innerHTML = `
-    <div class="header">PREPARADO?</div>
+    <div class="header"><center>QUIZ </br> 22/03 - Dia Mundial da Água</div>
         <ol></ol>
         <div id="start-quiz-wrapper">
             <button id="start-quiz">Iniciar Quiz</button>
@@ -131,14 +131,14 @@ let quizQuestion = (q) => {
 
 let quizResult = () => {
     container.innerHTML = `
-    <div class="header">QUIZ RESULT</div>
+    <div class="header">RESULTADOS</div>
         <div id="trophy">
             <i class="fa-solid fa-trophy"></i>
         </div>
-        <h3 id="score">You Got <b>${total_correct_ans}</b> Out Of <b>${quiz_questions.length}</b></h3>
+        <h3 id="score">Você acertou <b>${total_correct_ans}</b> de <b>${quiz_questions.length}</b></h3>
         <div id="result-footer">
-            <button id="start-again">Start Again</button>
-            <button id="detailed-result">View Detail</button>
+            <button id="start-again">Start</button>
+            <button id="detailed-result">Ver Detalhes</button>
         </div>
     `;
 
@@ -155,13 +155,13 @@ let quizResult = () => {
 
 let viewResult = ()=>{
     container.innerHTML = `
-    <div class="header">RESULT DETAIL</div>
+    <div class="header">QUESTÕES</div>
         <div class="content"></div>
 
-        <h3 id="score" class="result-score">You Got <b>${total_correct_ans}</b> Out Of <b>${quiz_questions.length}</b></h3>
+        <h3 id="score" class="result-score">Você acertou <b>${total_correct_ans}</b> de <b>${quiz_questions.length}</b></h3>
         <div id="result-footer">
-            <button id="start-again">Start Again</button>
-            <button id="view-result">View Result</button>
+            <button id="start-again">Start</button>
+            <button id="view-result">Ver Resultados</button>
         </div>
     `;
 
@@ -193,13 +193,13 @@ let viewResult = ()=>{
             
             if(quiz['selected_answer'] == quiz['answer']){
                 if(index+1 == quiz['answer']){
-                    option_container.innerHTML += `<p class="result-option correct">${option} <span>You</span></p>`
+                    option_container.innerHTML += `<p class="result-option correct">${option} <span>Você</span></p>`
                 }else{
                     option_container.innerHTML += `<p class="result-option">${option}</p>`
                 }
             }else{
                 if(index+1 == quiz['answer']){
-                    option_container.innerHTML += `<p class="result-option correct">${option} <span>Correct</span></p>`
+                    option_container.innerHTML += `<p class="result-option correct">${option} <span>Correta</span></p>`
                 }else if(index+1 == quiz['selected_answer']){
                     option_container.innerHTML += `<p class="result-option wrong">${option} <span>You</span></p>`
                 }else{
