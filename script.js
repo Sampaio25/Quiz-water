@@ -101,13 +101,13 @@ let quizQuestion = (q) => {
     time_left = 20;
     interval = setInterval(() => {
         time_left--;
+
         if (time_left == 0) {
             clearInterval(interval);
             // disable all options.
             options.forEach(disabled => {
                 disabled.style.pointerEvents = "none";
             });
-
             // adding next question button
             document.querySelector("#footer").innerHTML += `<button id="next-question">Next</button>`;
 
