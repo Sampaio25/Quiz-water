@@ -11,7 +11,7 @@ let quizRules = () => {
     total_correct_ans = 0;
 
     container.innerHTML = `
-    <div class="header"><center>QUIZ </br> 22/03 - Dia Mundial da Água</div>
+    <div class="header"><center>QUIZ GAME WATER</div>
         <ol></ol>
         <div id="start-quiz-wrapper">
             <button id="start-quiz">Iniciar Quiz</button>
@@ -201,7 +201,7 @@ let viewResult = ()=>{
                 if(index+1 == quiz['answer']){
                     option_container.innerHTML += `<p class="result-option correct">${option} <span>Correta</span></p>`
                 }else if(index+1 == quiz['selected_answer']){
-                    option_container.innerHTML += `<p class="result-option wrong">${option} <span>You</span></p>`
+                    option_container.innerHTML += `<p class="result-option wrong">${option} <span>Você</span></p>`
                 }else{
                     option_container.innerHTML += `<p class="result-option">${option}</p>`
                 }
