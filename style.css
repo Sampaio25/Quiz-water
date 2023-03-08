@@ -10,7 +10,7 @@
 }
 body
 {
-    background: linear-gradient(#1264ac, #81eeee);
+    background: linear-gradient(#1264ac, #3562a5);
     min-height: 100vh;
     display: grid;
     place-items: center;
@@ -20,10 +20,13 @@ body
 /* animação chuva */
 
 .container{
+    position: absolute;
+    margin-top: 30px;
+    top: 0;
     width: 320px;
-    margin-top: 5vh;
     height: 400px;
     border-bottom: blue;
+    animation: animarnuvem 10s linear infinite;
 }
 
 .nuvem{
@@ -31,7 +34,7 @@ body
     top: 50px;
     width: 100%;
     height: 20%;
-    background: #fff;
+    background: #224a96;
     border-radius: 100px;
     z-index: 10;
 }
@@ -43,9 +46,9 @@ body
     left: 40px;
     width: 110px;
     height: 100px;
-    background: #fff;
+    background: #224a96;
     border-radius: 50%;
-    box-shadow: 90px 0 0 30px #fff;
+    box-shadow: 90px 0 0 30px #224a96;
 }
 
 .chuva {
@@ -72,15 +75,28 @@ body
         transform: translateY(0) scale(1);
     }
     70% {
-        transform: translateY(293px) scale(1);
+        transform: translateY(80vh) scale(1);
     }
     100% {
-        transform: translateY(293px) scale(1);
+        transform: translateY(90vh) scale(1);
+    }
+}
+
+@keyframes animarnuvem {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
 
 #container
 {
+    z-index: 9999;
     border-radius: 30px;
     width: 400px;
     max-height: 630px;
