@@ -10,11 +10,37 @@
 }
 body
 {
-    background: linear-gradient(#1264ac, #3562a5);
+    
+    background-image: url(img/sol.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
     min-height: 100vh;
     display: grid;
     place-items: center;
 }
+
+@keyframes piscar {
+    0% {
+        background-image: url('img/chuva5.gif');
+      }
+      20% {
+        background-image: url('img/chuva.gif');
+      }
+      30% {
+        background-image: url('img/natureza12.gif');
+      }
+      50% {
+        background-image: url('img/chuva2.gif');
+      }
+      100% {
+        background-image: url('img/chuva5.gif');
+      }
+  }
+
+  body {
+    animation: piscar 60s infinite;
+  }
 
 
 /* animação chuva */
@@ -22,13 +48,13 @@ body
 .container{
     position: absolute;
     margin-top: 30px;
-    top: 0;
-    width: 320px;
+    top: -20px;
+    width:100%;
     height: 400px;
     border-bottom: blue;
-    animation: animarnuvem 10s linear infinite;
 }
 
+/*
 .nuvem{
     position: relative;
     top: 50px;
@@ -50,7 +76,7 @@ body
     border-radius: 50%;
     box-shadow: 90px 0 0 30px #224a96;
 }
-
+*/
 .chuva {
     display: flex;
     justify-content: center;
@@ -67,7 +93,7 @@ body
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-bottom: 19px solid rgb(0, 119, 255);
-    animation: animarChuva calc(15s / var(--i)) linear infinite;
+    animation: animarChuva calc(25s / var(--i)) linear infinite;
 }
 
 @keyframes animarChuva {
@@ -102,7 +128,7 @@ body
     max-height: 630px;
     border: 3px solid 	#000000;
     overflow: hidden;
-    background-color: 	#88ece2;
+    background-color: 	#015f8b;
     color: #fff;
 }
 .header
@@ -135,7 +161,7 @@ li
 }
 button
 {
-    background-color: #00CED1;
+    background-color: #0fa2a5;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -159,7 +185,7 @@ button:hover
 }
 .question
 {
-    color: #000;
+    color: #fff;
     font-size: 15px;
     font-weight: 500;
     padding: 5px 3px;
@@ -243,7 +269,7 @@ button:hover
     font-size: 13px;
     font-weight: 500;
     margin: 10px 0 20px 0;
-    color: #000;
+    color: #ffffff;
     font-weight: bold;
 }
 .time-over
@@ -288,8 +314,8 @@ button:hover
 #detailed-result
 {
     background: transparent;
-    color: #000;
-    border: 1px solid #000;
+    color: #ffffff;
+    border: 1px solid #3d4f80;
 }
 #detailed-result:hover
 {
