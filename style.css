@@ -16,6 +16,7 @@ body
     background-size: cover;
     background-position: center bottom;
     min-height: 100vh;
+    max-width: 100%;
     display: grid;
     place-items: center;
 }
@@ -105,18 +106,6 @@ body
     }
     100% {
         transform: translateY(90vh) scale(1);
-    }
-}
-
-@keyframes animarnuvem {
-    0% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
     }
 }
 
